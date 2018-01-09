@@ -1,1 +1,8 @@
-
+while true do
+  mon = peripheral.find("monitor")
+  if monitor then
+    x,y = mon.getSize()
+    mon.setCursorPos(1,y)
+    mon.clearLine()
+  end
+end
