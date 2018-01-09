@@ -2,6 +2,7 @@ while true do
   mon = peripheral.find("monitor")
   if monitor then
     x,y = mon.getSize()
+    mon.setBckgroundColor(colors.red)
     mon.setCursorPos(1,y)
     mon.clearLine()
     sleep(1)
