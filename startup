@@ -1,11 +1,12 @@
 while true do
 local mon = peripheral.find("monitor")
   if mon then
+    mon.clear()
     mon.setTextScale(5)
     x,y = mon.getSize()
     mon.setBackgroundColor(colors.red)
     mon.setCursorPos(1,y)
-    mon.clearLine()
+    mon.write("A")
     sleep(1)
    else
     sleep(1)
