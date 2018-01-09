@@ -1,8 +1,9 @@
-local  mon = peripheral.find("monitor")
 while true do
-  if monitor then
+local mon = peripheral.find("monitor")
+  if mon then
+    mon.setTextScale(5)
     x,y = mon.getSize()
-    mon.setBckgroundColor(colors.red)
+    mon.setBackgroundColor(colors.red)
     mon.setCursorPos(1,y)
     mon.clearLine()
     sleep(1)
