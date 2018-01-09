@@ -7,6 +7,8 @@ local mon = peripheral.find("monitor")
     mon.setTextScale(3)
     x,y = mon.getSize()
     mon.setBackgroundColor(colors.red)
+    mon.setCursorPos(x,y)
+    mon.clearLine()
       if lock then
       pos = x
       lock = false
