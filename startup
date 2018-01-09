@@ -1,5 +1,5 @@
+local  mon = peripheral.find("monitor")
 while true do
-  mon = peripheral.find("monitor")
   if monitor then
     x,y = mon.getSize()
     mon.setBckgroundColor(colors.red)
