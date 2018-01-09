@@ -8,5 +8,6 @@ while true do
     sleep(1)
    else
     sleep(1)
+    term.write("lol")
   end
 end
