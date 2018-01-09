@@ -4,5 +4,8 @@ while true do
     x,y = mon.getSize()
     mon.setCursorPos(1,y)
     mon.clearLine()
+    sleep(1)
+   else
+    sleep(1)
   end
 end
