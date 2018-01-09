@@ -15,7 +15,7 @@ local mon = peripheral.find("monitor")
     mon.setCursorPos(pos,y)
     mon.write("HAVE A VERY SAFE DAY")
     pos = pos - 1
-    sleep(0)
+    sleep(0.4)
    else
     sleep(1)
   end
