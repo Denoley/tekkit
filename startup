@@ -1,3 +1,4 @@
+lock = true
 while true do
 local mon = peripheral.find("monitor")
   if mon then
@@ -6,9 +7,15 @@ local mon = peripheral.find("monitor")
     mon.setTextScale(5)
     x,y = mon.getSize()
     mon.setBackgroundColor(colors.red)
-    mon.setCursorPos(5,y)
-    mon.write("A")
-    sleep(1)
+      if lock then
+      pos = x
+      lock = false
+      end
+    if pos = -20 then lock = true end 
+    mon.setCursorPos(pos,y)
+    mon.write("HAVE A VERY SAFE DAY")
+    pos = pos - 1
+    sleep(0)
    else
     sleep(1)
   end
