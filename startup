@@ -4,7 +4,7 @@ local mon = peripheral.find("monitor")
   if mon then
     mon.setBackgroundColor(colors.black)
     mon.clear()
-    mon.setTextScale(5)
+    mon.setTextScale(3)
     x,y = mon.getSize()
     mon.setBackgroundColor(colors.red)
       if lock then
