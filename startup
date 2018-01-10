@@ -35,7 +35,7 @@ while true do
 		mon.setCursorPos(pos,y)
 		mon.write(lowerBanner)
 		pos = pos - 1
-		centerText(mon,"title",1)
+		centerText(mon,title,1)
 		sleep(refreshDelay)
 	else
 		sleep(1)
