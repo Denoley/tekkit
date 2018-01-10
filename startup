@@ -1,6 +1,16 @@
 lock = true
 lowerBanner = "HAVE A VERY SAFE DAY"
 lowerBannerSpeed = 0.3
+
+
+
+function centerText(mon,text,posY) 
+  local x,y = mon.getSize()
+  mon.setCursorPos(math.round((x/2)-(text:len()/2)),posY)
+  mon.write(text)
+end
+
+
 while true do
 local mon = peripheral.find("monitor")
   if mon then
@@ -21,14 +31,9 @@ local mon = peripheral.find("monitor")
     mon.setCursorPos(pos,y)
     mon.write(lowerBanner)
     pos = pos - 1
+    centerText(mon,"Test_1",1)
     sleep(lowerBannerSpeed)
    else
     sleep(1)
   end
-end
-
-function centerText(mon,text,posY) 
-local x,y = mon.getSize()
-mon.setCursorPos(math.round((x/2)-(text:len()/2)),posY)
-mon.write(text)
 end
