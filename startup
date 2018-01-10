@@ -16,7 +16,7 @@ local mon = peripheral.find("monitor")
       pos = x
       lock = false
       end
-    if pos == -20 then lock = true end 
+    if pos == -string.len(lowerBanner) then lock = true end 
     mon.setCursorPos(pos,y)
     mon.write(lowerBanner)
     pos = pos - 1
