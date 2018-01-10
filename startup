@@ -1,39 +1,43 @@
-lock = true
+--------USERVARIABLES--------
+--Lower Banner Settings--
 lowerBanner = "HAVE A VERY SAFE DAY"
-lowerBannerSpeed = 0.3
+lowerBannerColor = colors.red
+--Gneral Settings--
+title = "General Status"
+mainBackgroundColor = colors.black
+refreshDelay = 0.3
 
 
+--------VARS--------
+lock = true
 
+--------FUNCTIONS--------
 function centerText(mon,text,posY) 
-  local x,y = mon.getSize()
-  mon.setCursorPos(math.ceil((x/2)-(string.len(text)/2)),posY)
-  mon.write(text)
+	local x,y = mon.getSize()
+	mon.setCursorPos(math.ceil((x/2)-(string.len(text)/2)),posY)
+	mon.write(text)
 end
 
-
+--------MAINLOOP--------
 while true do
-local mon = peripheral.find("monitor")
-  if mon then
-    term.clear()
-    mon.clear()
-    mon.setBackgroundColor(colors.black)
-    mon.clear()
-    mon.setTextScale(3)
-    x,y = mon.getSize()
-    mon.setBackgroundColor(colors.red)
-    mon.setCursorPos(x,y)
-    mon.clearLine()
-      if lock then
-      pos = x
-      lock = false
-      end
-    if pos == -string.len(lowerBanner) then lock = true end 
-    mon.setCursorPos(pos,y)
-    mon.write(lowerBanner)
-    pos = pos - 1
-    centerText(mon,"Test_1",1)
-    sleep(lowerBannerSpeed)
-   else
-    sleep(1)
-  end
+	local mon = peripheral.find("monitor")
+	if mon then
+		term.clear()
+		mon.setBackgroundColor(colors.black)
+		mon.clear()
+		mon.setTextScale(3)
+		x,y = mon.getSize()
+		mon.setBackgroundColor(colors.red)
+		mon.setCursorPos(x,y)
+		mon.clearLine()
+		if lock then pos = x lock = false end
+		if pos == -string.len(lowerBanner) then lock = true end 
+		mon.setCursorPos(pos,y)
+		mon.write(lowerBanner)
+		pos = pos - 1
+		centerText(mon,"title",1)
+		sleep(refreshDelay)
+	else
+		sleep(1)
+	end
 end
