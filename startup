@@ -6,7 +6,7 @@ lowerBannerSpeed = 0.3
 
 function centerText(mon,text,posY) 
   local x,y = mon.getSize()
-  mon.setCursorPos(math.round((x/2)-(string.len(text)/2)),posY)
+  mon.setCursorPos(math.ceil((x/2)-(string.len(text)/2)),posY)
   mon.write(text)
 end
 
