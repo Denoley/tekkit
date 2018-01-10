@@ -1,6 +1,7 @@
+term.clear()
 lock = true
 lowerBanner = "HAVE A VERY SAFE DAY"
-lowerBannerSpeed = 0.2
+lowerBannerSpeed = 0.3
 while true do
 local mon = peripheral.find("monitor")
   if mon then
