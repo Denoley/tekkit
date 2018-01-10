@@ -1,10 +1,11 @@
-term.clear()
 lock = true
 lowerBanner = "HAVE A VERY SAFE DAY"
 lowerBannerSpeed = 0.3
 while true do
 local mon = peripheral.find("monitor")
   if mon then
+    term.clear()
+    mon.clear()
     mon.setBackgroundColor(colors.black)
     mon.clear()
     mon.setTextScale(3)
@@ -24,4 +25,10 @@ local mon = peripheral.find("monitor")
    else
     sleep(1)
   end
+end
+
+function centerText(mon,text,posY) 
+local x,y = mon.getSize()
+mon.setCursorPos(math.round((x/2)-(text:len()/2)),posY)
+mon.write(text)
 end
