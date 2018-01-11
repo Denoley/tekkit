@@ -5,7 +5,7 @@ lowerBannerColor = colors.red
 lowerBannerLineColor = colors.red
 lowerBannerSize = 3
 --General Settings--
-title = "General Status"
+title = "Status Report"
 titleSize = 3
 titleColor = colors.black
 titleBackgroundLineColor = colors.orange
