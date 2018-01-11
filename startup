@@ -7,7 +7,7 @@ lowerBannerSize = 3
 --General Settings--
 title = "General Status"
 titleSize = 3
-titleBackgroundColor = colors.black
+titleColor = colors.black
 titleBackgroundLineColor = colors.orange
 mainBackgroundColor = colors.black
 refreshDelay = 0.3
@@ -40,6 +40,7 @@ while true do
 		if lock then pos = x lock = false end
 		if pos == -string.len(lowerBanner) then lock = true end 
 		mon.setCursorPos(pos,y)
+		mon.setTextColor(lowerBannerColor)
 		mon.write(lowerBanner)
 		pos = pos - 1
 		--Title--
@@ -47,7 +48,7 @@ while true do
 		mon.setTextScale(titleSize)
 		mon.setCursorPos(1,1)
 		mon.clearLine()
-		mon.setBackgroundColor(titleBackgroundColor)
+		mon.setTextColor(titleColor)
 		centerText(mon,title,1)
 
 		--SleepCycle--
