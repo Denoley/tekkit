@@ -31,6 +31,15 @@ while true do
 		term.clear()
 		mon.setBackgroundColor(colors.black)
 		mon.clear()
+		
+		--Title--
+		mon.setTextScale(titleSize)
+		mon.setBackgroundColor(titleBackgroundLineColor)
+		mon.setCursorPos(1,1)
+		mon.clearLine()
+		mon.setTextColor(titleColor)
+		centerText(mon,title,1)
+		
 		--Lower Banner--
 		mon.setTextScale(lowerBannerSize)
 		x,y = mon.getSize()
@@ -43,14 +52,6 @@ while true do
 		mon.setTextColor(lowerBannerColor)
 		mon.write(lowerBanner)
 		pos = pos - 1
-		--Title--
-		mon.setTextScale(titleSize)
-		mon.setBackgroundColor(titleBackgroundLineColor)
-		mon.setCursorPos(1,1)
-		mon.clearLine()
-		mon.setTextColor(titleColor)
-		centerText(mon,title,1)
-
 		--SleepCycle--
 		sleep(refreshDelay)
 	else
