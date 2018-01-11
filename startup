@@ -2,8 +2,11 @@
 --Lower Banner Settings--
 lowerBanner = "HAVE A VERY SAFE DAY"
 lowerBannerColor = colors.red
---Gneral Settings--
+lowerBannerSize = 3
+--General Settings--
 title = "General Status"
+titleSize = 3
+titleBackgroundColor = colors.black
 mainBackgroundColor = colors.black
 refreshDelay = 0.3
 
@@ -14,7 +17,7 @@ lock = true
 --------FUNCTIONS--------
 function centerText(mon,text,posY) 
 	local x,y = mon.getSize()
-	mon.setCursorPos(math.ceil((x/2)-(string.len(text)/2)),posY)
+	mon.setCursorPos(math.ceil((x/2)-(string.len(text)/2)) + 1,posY)
 	mon.write(text)
 end
 
@@ -22,10 +25,12 @@ end
 while true do
 	local mon = peripheral.find("monitor")
 	if mon then
+		--Initial Clean--
 		term.clear()
 		mon.setBackgroundColor(colors.black)
 		mon.clear()
-		mon.setTextScale(3)
+		--Lower Banner--
+		mon.setTextScale(lowerBannerSize)
 		x,y = mon.getSize()
 		mon.setBackgroundColor(colors.red)
 		mon.setCursorPos(x,y)
@@ -35,7 +40,12 @@ while true do
 		mon.setCursorPos(pos,y)
 		mon.write(lowerBanner)
 		pos = pos - 1
-		centerText(mon,title,1)
+		--Title--
+		mon.setBackgroundColor(titleBackgroundColor)
+		mon.setTextScale(titleSize)
+		centerText(mon,"title",1)
+
+		--SleepCycle--
 		sleep(refreshDelay)
 	else
 		sleep(1)
