@@ -48,7 +48,7 @@ while true do
 		mon.setCursorPos(1,1)
 		mon.clearLine()
 		mon.setBackgroundColor(titleBackgroundColor)
-		centerText(mon,"title",1)
+		centerText(mon,title,1)
 
 		--SleepCycle--
 		sleep(refreshDelay)
