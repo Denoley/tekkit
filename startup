@@ -44,8 +44,8 @@ while true do
 		mon.write(lowerBanner)
 		pos = pos - 1
 		--Title--
-		mon.setBackgroundColor(titleBackgroundLineColor)
 		mon.setTextScale(titleSize)
+		mon.setBackgroundColor(titleBackgroundLineColor)
 		mon.setCursorPos(1,1)
 		mon.clearLine()
 		mon.setTextColor(titleColor)
