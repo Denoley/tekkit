@@ -2,7 +2,7 @@
 --Lower Banner Settings--
 lowerBanner = "HAVE A VERY SAFE DAY"
 lowerBannerColor = colors.white
-lowerBannerLineColor = colors.red
+lowerBannerLineColor = colors.white
 lowerBannerSize = 3
 --General Settings--
 title = "Status Report"
@@ -45,7 +45,6 @@ while true do
 		pos = pos - 1
 		--Title--
 		mon.setTextScale(titleSize)
-		x,y = mon.getSize()
 		mon.setBackgroundColor(titleBackgroundLineColor)
 		mon.setCursorPos(1,1)
 		mon.clearLine()
