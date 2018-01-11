@@ -1,7 +1,7 @@
 --------USERVARIABLES--------
 --Lower Banner Settings--
 lowerBanner = "HAVE A VERY SAFE DAY"
-lowerBannerColor = colors.red
+lowerBannerColor = colors.white
 lowerBannerLineColor = colors.red
 lowerBannerSize = 3
 --General Settings--
