@@ -3,13 +3,12 @@
 lowerBanner = "HAVE A VERY SAFE DAY"
 lowerBannerColor = colors.white
 lowerBannerLineColor = colors.white
-lowerBannerSize = 3
 --General Settings--
 title = "Status Report"
-titleSize = 3
 titleColor = colors.black
 titleBackgroundLineColor = colors.orange
 mainBackgroundColor = colors.black
+textSize = 3
 refreshDelay = 0.3
 
 
@@ -33,7 +32,7 @@ while true do
 		mon.clear()
 		
 		--Title--
-		mon.setTextScale(titleSize)
+		mon.setTextScale(textSize)
 		mon.setBackgroundColor(titleBackgroundLineColor)
 		mon.setCursorPos(1,1)
 		mon.clearLine()
@@ -41,7 +40,6 @@ while true do
 		centerText(mon,title,1)
 		
 		--Lower Banner--
-		mon.setTextScale(lowerBannerSize)
 		x,y = mon.getSize()
 		mon.setBackgroundColor(lowerBannerLineColor)
 		mon.setCursorPos(x,y)
