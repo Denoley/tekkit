@@ -2,7 +2,7 @@
 --Lower Banner Settings--
 lowerBanner = "HAVE A VERY SAFE DAY"
 lowerBannerColor = colors.white
-lowerBannerLineColor = colors.white
+lowerBannerLineColor = colors.red
 --General Settings--
 title = "Status Report"
 titleColor = colors.black
