@@ -6,7 +6,7 @@ monitor.clear()
 monitor.setCursorPos(1,1)
 monitor.setTextScale(1)
   if not reader.isScanning() then
-    reader.scan(2)
+    reader.scan(5)
   end
   local event,data = os.pullEvent()
   if event == "rfid_detected" then
