@@ -4,5 +4,5 @@ local monitor = peripheral.find("monitor")
 while true do
   reader.scan(2)
   local event,data = os.pullEvent("rfid_detected")
-  term.writer(event + " " + data)
+  term.write(event + " " + data)
  end
