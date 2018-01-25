@@ -1,6 +1,6 @@
-local camera = peripheral.wrap("right")
+local camera = peripheral.wrap("left")
 local array = " .,-=+xX#"
-local monitor = peripheral.wrap("monitor_0")
+local monitor = peripheral.wrap("back")
 local yp = 1
 monitor.clear()
 monitor.setTextScale(0.5)
