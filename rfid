@@ -2,14 +2,19 @@ local reader = peripheral.find("rfid reader")
 local monitor = peripheral.find("monitor")
 
 while true do
+rs.setAnalogOutput("top",0)
 monitor.clear()
 monitor.setCursorPos(1,1)
 monitor.setTextScale(1)
   if not reader.isScanning() then
-    reader.scan(5)
+    reader.scan(4)
   end
   local event,data = os.pullEvent()
   if event == "rfid_detected" then
-    monitor.write("LOL")
+    monitor.write("Access")
+    monitor.setCursorPoint(1,2)
+    monitor.write("Granted")
+    rs.setAnalogOutput("top",15)
   end
+  sleep(1)
  end
